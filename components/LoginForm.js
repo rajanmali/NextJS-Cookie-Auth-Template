@@ -36,26 +36,44 @@ const LoginForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
-        <input
-          type="email"
-          name="email"
-          placeholder="Enter your email"
-          onChange={handleChange}
-          value={data.email}
-        ></input>
-        <input
-          type="password"
-          name="password"
-          placeholder="Enter your password"
-          onChange={handleChange}
-          value={data.password}
-        ></input>
-      </div>
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter your email"
+        onChange={handleChange}
+        value={data.email}
+      ></input>
+      <input
+        type="password"
+        name="password"
+        placeholder="Enter your password"
+        onChange={handleChange}
+        value={data.password}
+      ></input>
       <button type="submit" onClick={handleSubmit} disabled={data.isLoading}>
         {data.isLoading ? "Loading..." : "Login"}
       </button>
       {data.error && <div>{data.error}</div>}
+      <style jsx>{`
+        form {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-flow: column nowrap;
+        }
+
+        input {
+          display: block;
+          margin-bottom: 1em;
+          font-size: 1.2em;
+          padding: 0.7em;
+        }
+
+        button {
+          font-size: 1.2em;
+          padding: 0.7em;
+        }
+      `}</style>
     </form>
   );
 };

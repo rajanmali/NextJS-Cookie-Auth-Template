@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Layout = ({ children, title }) => {
   return (
-    <div>
+    <div className="container">
       <nav className="navbar">
         <span>
           Welcome, <strong>Guest</strong>
@@ -25,6 +25,11 @@ const Layout = ({ children, title }) => {
       {children}
 
       <style jsx>{`
+        .container {
+          width: 75%;
+          margin: 0 auto;
+        }
+
         .root {
           display: flex;
           align-items: center;
@@ -35,7 +40,7 @@ const Layout = ({ children, title }) => {
         .navbar {
           width: 100%;
           display: flex;
-          justify-content: space-around;
+          justify-content: space-between;
         }
 
         a {
@@ -49,6 +54,10 @@ const Layout = ({ children, title }) => {
           cursor: pointer;
           border-style: none;
           color: rgb(0, 0, 238);
+        }
+
+        h1 {
+          margin-bottom: 1em;
         }
       `}</style>
     </div>
