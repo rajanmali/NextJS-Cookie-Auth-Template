@@ -1,9 +1,18 @@
 import { Component } from "react";
+import Link from "next/link";
+
+import Layout from "../components/Layout";
 
 class Index extends Component {
   state = {};
   render() {
-    return <div>Hello World</div>;
+    return (
+      <Layout title="Home">
+        <Link href="/profile">
+          <a>Go To Profile</a>
+        </Link>
+      </Layout>
+    );
   }
 }
 

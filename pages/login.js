@@ -1,12 +1,12 @@
-import PropTypes from "prop-types";
+import Layout from "../components/Layout";
 import LoginForm from "../components/LoginForm";
 
-const Login = () => {
-  return <LoginForm />;
+const LoginPage = () => {
+  return (
+    <Layout title="Login Page">
+      <LoginForm />
+    </Layout>
+  );
 };
 
-Login.propTypes = {
-  //   name: PropTypes.string,
-};
-
-export default Login;
+export default LoginPage;
